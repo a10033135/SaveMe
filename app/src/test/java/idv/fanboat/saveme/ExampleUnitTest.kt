@@ -1,4 +1,4 @@
-package idv.fanboat.boat_weather
+package idv.fanboat.saveme
 
 import org.junit.Test
 
