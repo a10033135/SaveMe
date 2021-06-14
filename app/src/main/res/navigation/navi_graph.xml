@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navi_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="idv.fanboat.saveme.view.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_userItemFragment"
+            app:destination="@id/userItemFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="idv.fanboat.saveme.view.BlankFragment"
+        android:label="BlankFragment"
+        tools:layout="@layout/fragment_blank" />
+    <fragment
+        android:id="@+id/userItemFragment"
+        android:name="idv.fanboat.saveme.UserItemFragment"
+        android:label="fragment_user_item"
+        tools:layout="@layout/fragment_user_item" />
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="idv.fanboat.saveme.view.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
